@@ -1,0 +1,16 @@
+[package]
+name = "hammer"
+version = "0.1.0"
+authors = ["Istvan Szukacs <istvan@streambrightdata.com>"]
+
+[dependencies]
+hyper = "0.10"
+
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 1
+panic = 'unwind'
