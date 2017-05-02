@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Istvan Szukacs <istvan@streambrightdata.com>"]
 
 [dependencies]
-hyper = "0.10"
+hyper = "0.10.9"
 
 [profile.release]
 opt-level = 3

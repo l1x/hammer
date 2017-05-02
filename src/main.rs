@@ -8,7 +8,7 @@ use std::time::SystemTime;
 use std::thread;
 
 static NTHREADS:  i32 = 8;
-static NREQ:      i32 = 1000;
+static NREQ:      i32 = 3000;
 
 fn main() {
   
@@ -23,7 +23,7 @@ fn main() {
       for _ in 0..NREQ {
 
         let now = SystemTime::now();
-        let res = client.get("http://localhost:8080/hello").send();
+        let res = client.get("http://localhost:8080/hello").send()?.read_to_end();
         let _ = match res {
           Ok(_) => 0,
           Err(_) => 1,
